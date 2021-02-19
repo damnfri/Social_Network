@@ -54,18 +54,3 @@ div{
   /* grid-gap: 10px; */
   background-color: rgb(165, 182, 137);
 }
-.header {
-  grid-area: h;
-  background-color: cadetblue;
-}
-.header img{
-  width: 30px;
-}
-.nav {
-  grid-area: n;
-  background-color: cyan;
-}
-.content {
-  grid-area: c;
-  background-color: cornflowerblue;
-}
