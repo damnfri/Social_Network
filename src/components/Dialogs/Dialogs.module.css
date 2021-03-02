@@ -1,0 +1,23 @@
+.dialogs {
+
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogItems {
+    padding: 10px;
+    border: 3px solid #074543;
+}
+
+p {
+    font-size: 20px;
+    font-family: -apple-system;
+
+}
+
+.messages {
+    padding: 10px;
+    border: 3px solid #074543;
+
+}
+

@@ -1,28 +1,20 @@
-import p from "./Profile.module.css";
+import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfos from "./ProfileInfo/ProfileInfos";
 
-const Profile = () => {
-    return(
-      <div className = {p.content}>
-      <img src ="https://miro.medium.com/max/700/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg" width ="100%" height ="80px"></img>
-      
-      <div className ={p.item} >
-      ava+ description
-      </div>
-      <div className ={p.item} > 
-      My Post
-      <div>
-        new post
-      </div>
-      <div>
+
+const Profile = (props) => {
+
+    return (
         <div>
-          post1
+            <ProfileInfos/>
+
+            <MyPosts myPosts={props.myPosts}
+                     addPost={props.addPost}
+                     addText={props.addText}
+                     />
+
         </div>
-        <div>
-          post2
-        </div>
-      </div>
-      </div>
-      </div>
+
     )
 }
 export default Profile;

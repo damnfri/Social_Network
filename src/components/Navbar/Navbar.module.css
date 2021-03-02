@@ -1,7 +1,20 @@
 .nav {
   grid-area: n;
-  background-color: cyan;
+  background-color: #4eb5ad
+
+;
 }
 .item {
   color:white;
+  margin: 10px;
+  border: 1px solid #074543;
+  /*background-color: black;*/
+}
+.item a {
+  color: #fbfcfc;
+  text-decoration: none;
+}
+.item a.activeLink{
+  color: #074543;
+  font-size: 20px;
 }

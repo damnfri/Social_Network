@@ -1,0 +1,12 @@
+.dialog {
+    padding: 10px;
+}
+
+.dialog a.activeLink {
+    color: #04857e;
+}
+
+.dialog a {
+    color: #030a0a;
+    text-decoration: none;
+}

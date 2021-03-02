@@ -1,0 +1,27 @@
+.item {
+    color: green;
+    border:3px solid #439d8b;
+    padding:10px;
+}
+.item img {
+    width: 20%;
+    border-radius: 40px;
+}
+.item span{
+    color: black;
+}
+p {
+    color: black;
+}
+.likes {
+    text-align: right;
+    margin-top: 20px;
+
+}
+.likes span{
+    background-color: white;
+    padding: 3px;
+
+    text-emphasis-color: #030a0a;
+
+}

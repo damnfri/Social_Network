@@ -3,7 +3,9 @@ import h from "./Header.module.css";
 const Header = () => {
     return(
         <header className ={h.header}>
-        <img src = "https://cdn.mos.cms.futurecdn.net/BVb3Wzn9orDR8mwVnhrSyd-970-80.jpg.webp"></img>
+
+        <img src = "https://smallbizwebdesign.com.au/wp-content/uploads/2017/04/NASA-logo.png"></img>
+
         </header>
     )
 }
