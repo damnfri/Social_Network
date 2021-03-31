@@ -9,7 +9,7 @@ import React from "react";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
+
             <div className="app-wrapper">
                 <Header/>
                 <Navbar/>
@@ -17,19 +17,16 @@ const App = (props) => {
                     <Route path='/dialogs'
                            render={() => <Dialogs dialogsData={props.state.messagePage.dialogsData}/>}/>
                     <Route path='/profile'
-                           render={() => <Profile addPost={props.addPost}
-                                                  addText={props.addText}
+                           render={() => <Profile dispatch={props.dispatch}
                                                   myPosts={props.state.profilePage}/>}/>
                     <Route path='/news'
-                           render={() => <Profile addText ={props.addText}
-                                                  addPost={props.addPost}
-                                                  myPosts={props.state.profilePage}/>}/>
+                           render={() => <Profile/>}/>
                     <Route path='/music' component={Profile}/>
                     <Route path='/settings' component={Profile}/>
 
                 </div>
             </div>
-        </BrowserRouter>
+
     );
 }
 export default App;
