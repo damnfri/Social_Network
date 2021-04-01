@@ -20,4 +20,25 @@ p {
     border: 3px solid #074543;
 
 }
+button{
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-size: 16px;
+    /*font-family:,sans-serif;*/
+    /*font-weight:300;*/
+    color:#FFFFFF;
+    background-color: #4cbfb3;
+    text-align:center;
+
+}
+
+/*@media all and (max-width:30em){*/
+/*    button{*/
+/*     display:block;*/
+/*        margin:0.2em auto;*/
+/*        }*/
+/*}*/
 

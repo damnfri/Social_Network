@@ -10,22 +10,23 @@ import React from "react";
 const App = (props) => {
     return (
 
-            <div className="app-wrapper">
-                <Header/>
-                <Navbar/>
-                <div className="app-wrapper-content">
-                    <Route path='/dialogs'
-                           render={() => <Dialogs dialogsData={props.state.messagePage.dialogsData}/>}/>
-                    <Route path='/profile'
-                           render={() => <Profile dispatch={props.dispatch}
-                                                  myPosts={props.state.profilePage}/>}/>
-                    <Route path='/news'
-                           render={() => <Profile/>}/>
-                    <Route path='/music' component={Profile}/>
-                    <Route path='/settings' component={Profile}/>
+        <div className="app-wrapper">
+            <Header/>
+            <Navbar/>
+            <div className="app-wrapper-content">
+                <Route path='/dialogs'
+                       render={() => <Dialogs dispatch={props.dispatch}
+                                              dialogsData={props.state.messagePage}/>}/>
+                <Route path='/profile'
+                       render={() => <Profile dispatch={props.dispatch}
+                                              myPosts={props.state.profilePage}/>}/>
+                <Route path='/news'
+                       render={() => <Profile/>}/>
+                <Route path='/music' component={Profile}/>
+                <Route path='/settings' component={Profile}/>
 
-                </div>
             </div>
+        </div>
 
     );
 }
