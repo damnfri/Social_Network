@@ -34,6 +34,11 @@ button{
     text-align:center;
 
 }
+button:focus{
+    text-decoration: none;
+    background-color: #4eb5ad;
+    border-color: #030a0a;
+}
 
 /*@media all and (max-width:30em){*/
 /*    button{*/

@@ -2,12 +2,7 @@ import React from 'react';
 import dialogsCss from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import DialogMessage from './DialogMessage/DialogMessage'
-import {
-    addMessageActionCreator,
-    addPostActionCreator,
-    updateMessageTextActionCreator,
-    updateTextActionCreator
-} from "../../redux/state";
+import TestContext from "../../redux/StoreContext";
 
 const Dialogs = (props) => {
     let dialogsDataJSX = props.dialogsData.dialogsData.map(dialog => <DialogItem id={dialog.id}
@@ -18,14 +13,15 @@ const Dialogs = (props) => {
 
     let updateText = () => {
         let text = updateTextRef.current.value;
-        let action = updateMessageTextActionCreator(text);
-        props.dispatch(action);
+        props.updateText(text)
 
     }
     let addMessage = () => {
-        let action = addMessageActionCreator();
-        props.dispatch(action);
+        if (updateTextRef.current.value === '') return;
+        props.addMessage();
     }
+
+
     return (
         <div className={dialogsCss.dialogs}>
 
@@ -43,7 +39,10 @@ const Dialogs = (props) => {
                               ref={updateTextRef}
                               placeholder="Write your message"
                               onDoubleClick={addMessage}/>
-                    <button  onClick={addMessage}>Send a message</button>
+                    <button onClick={addMessage}>Send a message</button>
+                    <TestContext.Consumer>
+                        {value=> <p>{value}</p> }
+                    </TestContext.Consumer>
                 </div>
             </div>
 
