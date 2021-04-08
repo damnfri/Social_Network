@@ -9,17 +9,15 @@ import TestContext from "./redux/StoreContext";
 
 let rerenderEntireTree = (store) => {
     ReactDOM.render(
-        <TestContext.Provider value={store}>
-            <BrowserRouter>
-                <App/>
+        <BrowserRouter>
+                <App store={store}/>
 
-            </BrowserRouter>
-        </TestContext.Provider>, document.getElementById('root')
+            </BrowserRouter>, document.getElementById('root')
     );
 };
 rerenderEntireTree(store);
 
 store.subscribe(() => {
-    let state = store.getState();
-    rerenderEntireTree(state);
+    //let state = store.getState();
+    rerenderEntireTree(store);
 });
