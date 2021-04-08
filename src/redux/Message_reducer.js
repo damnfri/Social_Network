@@ -3,7 +3,7 @@ let UPDATE_MESSAGE_TEXT = 'UPDATE_MESSAGE_TEXT';
 
 let initialState = {
     dialogsData: [
-        {id: 1, name: 'Oleg', },
+        {id: 1, name: 'Olddg', },
         {id: 2, name: 'Vasya', },
         {id: 3, name: 'Alex', },
         {id: 4, name: 'Jenya',},
