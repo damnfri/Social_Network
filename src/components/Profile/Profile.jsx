@@ -8,7 +8,7 @@ const Profile = (props) => {
         <div>
             <ProfileInfos/>
 
-            <MyPostsContainer store={props.store} />
+            <MyPostsContainer  />
 
         </div>
 

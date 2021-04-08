@@ -4,7 +4,6 @@ import MyPostsCSS from "./MyPosts.module.css";
 
 
 const MyPosts = (props) => {
-    debugger;
     let myPostsJSX = props.myPosts.myPostsArray.map(post => <Post number={post.id} key={post.id} likes={post.likes}
                                                                   src={post.src}
                                                                   message={post.message}/>);

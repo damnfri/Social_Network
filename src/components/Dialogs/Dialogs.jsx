@@ -5,6 +5,7 @@ import DialogMessage from './DialogMessage/DialogMessage'
 import TestContext from "../../redux/StoreContext";
 
 const Dialogs = (props) => {
+
     let dialogsDataJSX = props.dialogsData.dialogsData.map(dialog => <DialogItem id={dialog.id}
                                                                                  name={dialog.name}/>);
     let dialogsDataMessageJSX = props.dialogsData.messages.map(message => <DialogMessage message={message.message}/>);

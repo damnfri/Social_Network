@@ -7,7 +7,8 @@ import React from "react";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 
-const App = (props) => {
+const App = () => {
+
     return (
 
         <div className="app-wrapper">
@@ -15,9 +16,9 @@ const App = (props) => {
             <Navbar/>
             <div className="app-wrapper-content">
                 <Route path='/dialogs'
-                       render={() => <DialogsContainer store={props.store}/>}/>
+                       render={() => <DialogsContainer/>}/>
                 <Route path='/profile'
-                       render={() => <Profile store={props.store}/>}/>
+                       render={() => <Profile/>}/>
                 <Route path='/news'
                        render={() => <Profile/>}/>
                 <Route path='/music' component={Profile}/>

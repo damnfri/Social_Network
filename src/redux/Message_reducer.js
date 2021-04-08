@@ -40,6 +40,7 @@ const messageReducer = (state= initialState, action) => {
             return state;
     }
 }
+
 export default messageReducer;
 
 export const addMessageActionCreator = () =>({type:ADD_MESSAGE});
