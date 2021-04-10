@@ -6,7 +6,7 @@ let text = "Существуют две основные трактовки по
 let src = 'https://media.gettyimages.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618808?s=2048x2048'
 let initialState = {
     myPostsArray: [
-        {id: 1, message: text, likes: '24', src: src,},
+        // {id: 1, message: text, likes: '24', src: src,},
         // {id: 2, message: text, likes: '65', src: src,},
         // {id: 3, message: text, likes: '33', src: src,},
         // {id: 4, message: text, likes: '12', src: src,},
@@ -17,22 +17,27 @@ let initialState = {
     ],
     currentTextarea: '',
 }
-const profileReducer = (state = initialState, action) => {
 let id = 1;
+let key = 0;
+const profileReducer = (state = initialState, action) => {
+    let stateCopy = {...state};
     switch (action.type) {
+
         case UPDATE_POST_TEXT:
-            state.currentTextarea = action.newText;
-            return state;
+            stateCopy.currentTextarea = action.newText;// clear function does not change state
+            return stateCopy;
         case ADD_POST:
             let newPost = {
                 id: id++,
+                key: key++,
                 message: state.currentTextarea,
                 likes: '33',
                 src: src,
             }
-            state.myPostsArray.push(newPost);
-            state.currentTextarea = '';
-            return state;
+            stateCopy = {...state};
+            stateCopy.myPostsArray.push(newPost);
+            stateCopy.currentTextarea = '';
+            return stateCopy;
         default:
             return state;
 

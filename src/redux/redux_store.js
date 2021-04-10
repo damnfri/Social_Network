@@ -11,5 +11,9 @@ let reducers = combineReducers({
 
 let store = createStore(reducers);
 
+// makes possible to call store in browser!
+window.store = store;
+
 export default store;
+
 

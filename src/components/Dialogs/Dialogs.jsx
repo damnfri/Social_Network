@@ -5,9 +5,10 @@ import DialogMessage from './DialogMessage/DialogMessage'
 import TestContext from "../../redux/StoreContext";
 
 const Dialogs = (props) => {
-    let dialogsDataJSX = props.dialogsData.dialogsData.map(dialog => <DialogItem id={dialog.id}
+    let dialogsDataJSX = props.dialogsData.dialogsData.map(dialog => <DialogItem key={dialog.key}
+                                                                                 id={dialog.id}
                                                                                  name={dialog.name}/>);
-    let dialogsDataMessageJSX = props.dialogsData.messages.map(message => <DialogMessage message={message.message}/>);
+    let dialogsDataMessageJSX = props.dialogsData.messages.map(message => <DialogMessage key={message.key} message={message.message}/>);
 
     let updateTextRef = React.createRef();
 
