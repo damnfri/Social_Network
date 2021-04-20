@@ -11,26 +11,26 @@ const mapStateToProps = (state) =>{
 }
 const mapDispatchToProps =(dispatch) =>{
     return{
-        addUser: ()=>{
-            let newUser = [{
-                id: 1,
-                userName: 'Jimmy Hendrx',
-                userCountry: "United States",
-                userCity: "Boston",
-                userStatus: "Mom, i`m in Boston",
-                userFollowed: false,
-                photoUrl: src,
-
-            }, {
-                id: 2,
-                userName: 'Jimmy Hendrx',
-                userCountry: "United States",
-                userCity: "Boston",
-                userStatus: "Mom, i`m in Boston",
-                userFollowed: false,
-                photoUrl: src,
-            }
-            ]
+        addUser: (newUser)=>{
+            // let newUser = [{
+            //     id: 1,
+            //     userName: 'Jimmy Hendrx',
+            //     userCountry: "United States",
+            //     userCity: "Boston",
+            //     userStatus: "Mom, i`m in Boston",
+            //     userFollowed: false,
+            //     photoUrl: src,
+            //
+            // }, {
+            //     id: 2,
+            //     userName: 'Jimmy Hendrx',
+            //     userCountry: "United States",
+            //     userCity: "Boston",
+            //     userStatus: "Mom, i`m in Boston",
+            //     userFollowed: false,
+            //     photoUrl: src,
+            // }
+            // ]
             dispatch(addUserActionCreator(newUser));
         },
         followUser: (userId) =>{

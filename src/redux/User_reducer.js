@@ -6,7 +6,7 @@ let src = 'https://media.gettyimages.com/vectors/human-face-avatar-icon-profile-
 
 let initialState = {
     users: [
-        // {id: 0, userName: 'vassa1',userCountry: 'usa', userCity: 'boston',userStatus:'oOOo',userFollowed: false, photoUrl: src},
+       // {id: 0, userName: 'vassa1',userCountry: 'usa', userCity: 'boston',userStatus:'oOOo',userFollowed: false, photoUrl: src},
         // {id: 1, userName: 'vassa2',userCountry: 'brit', userCity: 'boston1',userStatus:'00000',userFollowed: true, photoUrl: src},
         // {id: 2, userName: 'vassa3',userCountry: 'brit', userCity: 'boston1',userStatus:'00000',userFollowed: true, photoUrl: src},
         // {id: 3, userName: 'vassa4',userCountry: 'brit', userCity: 'boston1',userStatus:'00000',userFollowed: true, photoUrl: src},

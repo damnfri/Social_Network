@@ -1,12 +1,30 @@
 import React from "react";
 import users from './User.module.css';
+import * as axios from "axios";
+
+let src = 'https://media.gettyimages.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618808?s=2048x2048'
+let User = (props) => {
+    let addUser = () => {
+        if (props.user.users.length === 0) {
+            axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+                // let test = [{
+                //     id: 1,
+                //     userName: response.data.items[0]['name'],
+                //     userCountry: "United States",
+                //     userCity: "Boston",
+                //     userStatus: "Mom, i`m in Boston",
+                //     userFollowed: false,
+                //     photoUrl: src,
+                // }]
 
 
-const User = (props) => {
-
+                props.addUser(response.data.items);
+            })
+        }
+    }
 
     return <div>
-        <button onClick={() => props.addUser()}>add New User</button>
+        <button onClick={() => addUser()}>add New User</button>
 
         {
             props.user.users.map(u => <div key={u.id}>
