@@ -22,21 +22,26 @@ let id = 1;
 let key = 2;
 
 const messageReducer = (state= initialState, action) => {
-
+    let stateCopy = {...state};
     switch (action.type) {
 
         case ADD_MESSAGE:
-            return {
-                    ...state,
-                    messages: [...state.messages, {id: id++, key: key++, message:state.currentTextarea}],
-                    currentTextarea: '',
-            }
+            stateCopy.messages.push({id: id++, key: key++, message:state.currentTextarea});
+            stateCopy.currentTextarea ='';
+            return stateCopy;
+        // {
+        //             ...state,
+        //             messages: [...state.messages, {id: id++, key: key++, message:state.currentTextarea}],
+        //             currentTextarea: '',
+        //     }
 
         case UPDATE_MESSAGE_TEXT:
-            return {
-                ...state,
-                currentTextarea: action.newText,
-            }
+            stateCopy.currentTextarea = action.newText;
+            return stateCopy;
+        // {
+        //         ...state,
+        //         currentTextarea: action.newText,
+        //     }
 
         default:
             return state;

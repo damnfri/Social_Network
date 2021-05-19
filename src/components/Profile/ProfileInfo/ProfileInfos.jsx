@@ -5,8 +5,9 @@ let imgSrc = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Silvrett
 const ProfileInfos = () => {
     return <div>
             <img className={yu.imgBorder} src={imgSrc}/>
-            <p>Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления информации о внешней тексту действительности.
-            </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consectetur delectus quo reprehenderit
+            tenetur. Autem consectetur explicabo, harum laboriosam minima nostrum quaerat reprehenderit saepe
+            voluptatem. Ad excepturi hic magni minima.</p>
         </div>
 
 

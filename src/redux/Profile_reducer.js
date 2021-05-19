@@ -2,8 +2,8 @@ let UPDATE_POST_TEXT = 'UPDATE_POST_TEXT';
 let ADD_POST = 'ADD_POST';
 
 
-let text = "Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления информации о внешней тексту действительности."
-let src = 'https://media.gettyimages.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618808?s=2048x2048'
+const text = "Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления информации о внешней тексту действительности."
+const src = 'https://media.gettyimages.com/vectors/human-face-avatar-icon-profile-for-social-network-man-vector-vector-id1227618808?s=2048x2048'
 let initialState = {
     myPostsArray: [
         // {id: 1, message: text, likes: '24', src: src,},
@@ -34,7 +34,7 @@ const profileReducer = (state = initialState, action) => {
                 likes: '33',
                 src: src,
             }
-            stateCopy = {...state};
+
             stateCopy.myPostsArray.push(newPost);
             stateCopy.currentTextarea = '';
             return stateCopy;

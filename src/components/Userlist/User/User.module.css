@@ -28,3 +28,13 @@ p {
     text-emphasis-color: #030a0a;
 
 }
+.pages {
+    color: black;
+    font-size: 20px;
+}
+.pages:hover {
+    background-color: #439d8b;
+}
+.pages:visited {
+    background-color: #439d8b;
+}
